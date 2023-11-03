@@ -1,0 +1,6 @@
+@UdemyCarBook.WebApi_HostAddress = http://localhost:5169
+
+GET {{UdemyCarBook.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,34 @@
+﻿@model List<ResultLast5CarsWithBrandsDto>
+
+<section class="ftco-section ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Sizin İçin Önerilerimiz</span>
+                <h2 class="mb-2">Öner Çıkan Araçlarımız</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel-car owl-carousel">
+                @foreach(var item in Model){
+                    <div class="item">
+                        <div class="car-wrap rounded ftco-animate">
+                            <div class="img rounded d-flex align-items-end" style="background-image: url(@item.CoverImageUrl);">
+                            </div>
+                            <div class="text">
+                                <h2 class="mb-0"><a href="#">@item.Model</a></h2>
+                                <div class="d-flex mb-3">
+                                    <span class="cat">@item.BrandName</span>
+                                    <p class="price ml-auto">1200₺ <span>/Günlük</span></p>
+                                </div>
+                                <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Aracı Kirala</a> <a href="#" class="btn btn-secondary py-2 ml-1">Detaylar</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
