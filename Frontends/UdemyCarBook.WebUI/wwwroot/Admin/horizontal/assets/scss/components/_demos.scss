@@ -1,0 +1,42 @@
+// 
+// _demos.scss
+// 
+
+.scrollspy-example {
+    position: relative;
+    height: 200px;
+    margin-top: .5rem;
+    overflow: auto;
+}
+
+
+// Icons
+.icons-list {
+    color: $gray-600;
+
+    div {
+        cursor: pointer;
+        line-height: 45px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+    i {
+        font-size: 22px;
+        line-height: 30px;
+        display: block;
+    }
+}
+
+// Buttons 
+.button-examples {
+    margin-left: -5px;
+    margin-bottom: -10px;
+
+    .btn {
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+}

@@ -1,0 +1,31 @@
+/* 
+============
+    Maps
+============
+*/
+
+// Google
+.gmaps {
+	height: 450px;
+	width: 100%;
+	border: 0;
+}
+
+.gmaps-dark {
+	-webkit-filter: grayscale(100%);
+	   -moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		 -o-filter: grayscale(100%);
+		    filter: grayscale(100%);
+}
+
+
+// Vector
+.jvectormap-tip {
+	border: none;
+	background: $gray-800;
+	color: $gray-100;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	padding: 5px 8px;
+}

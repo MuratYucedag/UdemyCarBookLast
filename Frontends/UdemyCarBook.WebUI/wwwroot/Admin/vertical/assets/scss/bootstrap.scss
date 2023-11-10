@@ -1,0 +1,23 @@
+/*
+Template Name: Xacton - Admin & Dashboard Template
+Author: Myra Studio
+Version: 1.0.0
+File: Bootstrap Css
+*/
+
+@import "../scss/plugins/bootstrap/functions";
+@import "../scss/plugins/bootstrap/variables";
+@import "variables";
+@import "../scss/plugins/bootstrap/bootstrap";
+
+
+// Bootstrap Components
+@import "components/reboot";
+@import "components/badge";
+@import "components/buttons";
+@import "components/breadcrumb";
+@import "components/card";
+@import "components/dropdown";
+@import "components/nav";
+@import "components/table";
+@import "components/pagination";

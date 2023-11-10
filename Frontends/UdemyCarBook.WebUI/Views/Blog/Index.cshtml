@@ -1,0 +1,32 @@
+﻿@model List<ResultAllBlogsWithAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+          @foreach(var item in Model)
+          {
+            <div class="col-md-12 text-center d-flex ftco-animate">
+                <div class="blog-entry justify-content-end mb-md-5">
+                    <a href="blog-single.html" class="block-20 img" style="background-image: url('@item.coverImageUrl');">
+                    </a>
+                    <div class="text px-md-5 pt-4">
+                        <div class="meta mb-3">
+                            <div><a href="#">@item.createdDate.ToShortDateString()</a></div>
+                            <div><a href="#">@item.authorName</a></div>
+                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">@item.title</a></h3>
+                        <p>@item.Description</p>
+                        <p><a href="/Blog/BlogDetail/@item.blogID" class="btn btn-primary">Devamını Oku <span class="icon-long-arrow-right"></span></a></p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        
+    </div>
+</section>

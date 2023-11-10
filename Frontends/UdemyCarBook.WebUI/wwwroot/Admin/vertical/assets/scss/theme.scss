@@ -1,0 +1,86 @@
+/*
+Template Name: Xacton - Admin & Dashboard Template
+Author: Myra Studio
+Version: 1.0.0
+File: App Css
+*/
+
+/*
+1. Left sidenav
+2. Header
+3. Footer
+4. Avatar
+5. Helper
+6. Demos
+7. Scrollbar
+8. Sweetalert
+9. Morris
+10. Sparkline-chart
+11. Datatable
+12. Calendar
+13.  Maps
+14. Select2
+15. Datepicker
+16. Daterange
+17. Waves 
+18. Auth
+19. Pricing
+*/
+
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+//Core files
+@import "../scss/plugins/bootstrap/functions";
+@import "../scss/plugins/bootstrap/variables";
+@import "variables";
+@import "../scss/plugins/bootstrap/mixins";
+
+// Structure
+/* 1. Left sidenav */
+@import "structure/menu";
+/* 2. Header */
+@import "structure/header";
+/* 3. Footer */
+@import "structure/footer";
+
+// Components
+/* 4. Avatar */
+@import "components/avatar";
+/* 5. Helper */
+@import "components/helper";
+/* 6. Demos */
+@import "components/demos";
+/* 7. Waves */
+@import "components/print";
+
+// Plugins
+/* 8. Scrollbar */
+@import "plugins/custom-scrollbar";
+/* 9. Sweetalert */
+@import "plugins/sweetalert";
+/* 10. Morris */
+@import "plugins/morris";
+/* 11. Sparkline-chart */
+@import "plugins/sparkline-chart";
+/* 12. Datatable */
+@import "plugins/datatable";
+/* 13. Calendar */
+@import "plugins/calendar";
+/* 14. Maps */
+@import "plugins/maps";
+/* 15. Select2 */
+@import "plugins/select2";
+/* 16. Datepicker */
+@import "plugins/datepicker";
+/* 17. Daterange */
+@import "plugins/daterange";
+/* 18. Waves */
+@import "plugins/waves";
+
+// Pages
+/* 19. Auth*/
+@import "pages/auth";
+/* 20. Pricing */
+@import "pages/pricing";

@@ -1,0 +1,27 @@
+//
+// sparkline.scss
+//
+
+.jqstooltip {
+  box-sizing: content-box;
+  width: auto !important;
+  height: auto !important;
+  background-color: $dark !important;
+  box-shadow: $box-shadow-lg;
+  padding: 5px 10px !important;
+  border-radius: 3px;
+  border-color: $dark !important;
+}
+
+.jqsfield {
+  color: $white !important;
+  font-size: 12px !important;
+  line-height: 18px !important;
+  font-family: $font-family-base !important;
+  font-weight: $font-weight-medium !important;
+}
+
+[data-plugin="knob"] {
+  font-family: $font-family-base !important;
+  font-weight: $font-weight-medium !important;
+}

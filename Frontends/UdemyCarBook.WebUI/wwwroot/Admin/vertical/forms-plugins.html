@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Xacton - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="MyraStudio" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Plugins css -->
+    <link href="../plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+    <link href="../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="../plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                
+                <div class="d-flex align-items-left">
+                    <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    <div class="dropdown d-none d-sm-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-plus"></i> Create New
+                            <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                Application
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                Software
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                EMS System
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                CRM App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <div class="dropdown d-none d-sm-inline-block ml-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-search-dropdown">
+                            
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="" src="assets/images/flags/us.jpg"alt="Header Language" height="16">
+                            <span class="d-none d-sm-inline-block ml-1">English</span>
+                            <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-bell"></i>
+                            <span class="badge badge-danger badge-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <img src="assets/images/users/avatar-2.jpg"
+                                            class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Samuel Coverdale</h6>
+                                            <p class="font-size-12 mb-1">You have new follower on Instagram</p>
+                                            <p class="font-size-12 mb-0 text-muted"><i class="mdi mdi-clock-outline"></i> 2 min ago</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-success rounded-circle">
+                                                <i class="mdi mdi-cloud-download-outline"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Download Available !</h6>
+                                            <p class="font-size-12 mb-1">Latest version of admin is now available. Please download here.</p>
+                                            <p class="font-size-12 mb-0 text-muted"><i class="mdi mdi-clock-outline"></i> 4 hours ago</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <img src="assets/images/users/avatar-3.jpg"
+                                            class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Victoria Mendis</h6>
+                                            <p class="font-size-12 mb-1">Just upgraded to premium account.</p>
+                                            <p class="font-size-12 mb-0 text-muted"><i class="mdi mdi-clock-outline"></i> 1 day ago</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top">
+                                <a class="btn btn-sm btn-light btn-block text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-down-circle mr-1"></i> Load More..
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-3.jpg"
+                                alt="Header Avatar">
+                            <span class="d-none d-sm-inline-block ml-1">Jamie D.</span>
+                            <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                <span>Inbox</span>
+                                <span>
+                                    <span class="badge badge-pill badge-info">3</span>
+                                </span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                <span>Profile</span>
+                                <span>
+                                    <span class="badge badge-pill badge-warning">1</span>
+                                </span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                Settings
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                <span>Lock Account</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <div class="navbar-brand-box">
+                    <a href="index.html" class="logo">
+                        <i class="mdi mdi-alpha-x-circle"></i>
+                        <span>
+                            Xacton
+                        </span>
+                    </a>
+                </div>
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title">Menu</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect"><i class="feather-airplay"></i><span class="badge badge-pill badge-primary float-right">7</span><span>Dashboard</span></a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="feather-copy"></i><span>Pages</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="pages-invoice.html">Invoice</a></li>
+                                <li><a href="pages-starter.html">Starter Page</a></li>
+                                <li><a href="pages-maintenance.html">Maintenance</a></li>
+                                <li><a href="pages-faqs.html">FAQs</a></li>
+                                <li><a href="pages-pricing.html">Pricing</a></li>
+                                <li><a href="pages-login.html">Login</a></li>
+                                <li><a href="pages-register.html">Register</a></li>
+                                <li><a href="pages-recoverpw.html">Recover Password</a></li>
+                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>
+                                <li><a href="pages-404.html">Error 404</a></li>
+                                <li><a href="pages-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="calendar.html" class=" waves-effect"><i class="feather-calendar"></i><span>Calendar</span></a></li>
+
+                        <li class="menu-title">Components</li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="feather-briefcase"></i><span>UI Elements</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-cards.html">Cards</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a>
+                                <li><a href="ui-embeds.html">Embeds</a>
+                                <li><a href="ui-general.html">General</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                                <li><a href="ui-media-objects.html">Media Objects</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-progressbars.html">Progress Bars</a></li>
+                                <li><a href="ui-tabs.html">Tabs</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-toasts.html">Toasts</a></li>
+                                <li><a href="ui-tooltips-popovers.html">Tooltips & Popovers</a></li>
+                                <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                <li><a href="ui-spinners.html">Spinners</a></li>
+                                <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="feather-list"></i><span>Tables</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="tables-basic.html">Basic Tables</a></li>
+                                <li><a href="tables-datatables.html">Data Tables</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="feather-bar-chart-2"></i><span>Charts</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="charts-morris.html">Morris</a></li>
+                                <li><a href="charts-google.html">Google</a></li>
+                                <li><a href="charts-chartjs.html">Chartjs</a></li>
+                                <li><a href="charts-sparkline.html">Sparkline</a></li>
+                                <li><a href="charts-knob.html">Jquery Knob</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect"><i class="feather-book"></i><span class="badge badge-pill badge-danger float-right">6</span><span>Forms</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="forms-elements.html">Elements</a></li>
+                                <li><a href="forms-plugins.html">Plugins</a></li>
+                                <li><a href="forms-validation.html">Validation</a></li>
+                                <li><a href="forms-mask.html">Masks</a></li>
+                                <li><a href="forms-quilljs.html">Quilljs</a></li>
+                                <li><a href="forms-uploads.html">File Uploads</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="feather-box"></i><span>Icons</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="icons-materialdesign.html">Material Design</a></li>
+                                <li><a href="icons-fontawesome.html">Font awesome</a></li>
+                                <li><a href="icons-dripicons.html">Dripicons</a></li>
+                                <li><a href="icons-feather.html">Feather Icons</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title">More</li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="feather-map"></i><span>Maps</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="maps-google.html">Google Maps</a></li>
+                                <li><a href="maps-vector.html">Vector Maps</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-share-variant"></i><span>Multi Level</span></a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="javascript: void(0);">Level 1.1</a></li>
+                                <li><a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="javascript: void(0);">Level 2.1</a></li>
+                                        <li><a href="javascript: void(0);">Level 2.2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18">Plugins</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                        <li class="breadcrumb-item active">Plugins</li>
+                                    </ol>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>     
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="card-body">
+                    
+                                    <h4 class="card-title">Bootstrap MaxLength</h4>
+                                    <p class="card-subtitle mb-4">Uses the HTML5 attribute "maxlength" to work.</p>
+
+                                    <div class="form-group">
+                                        <label>Default usage</label>
+                                        <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Threshold value</label>
+                                        <input type="text" maxlength="25" name="thresholdconfig" class="form-control" id="thresholdconfig" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Position</label>
+                                        <input type="text" class="form-control" maxlength="25" name="placement" id="placement" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>All the options</label>
+                                        <input type="text" class="form-control" maxlength="25" name="alloptions" id="alloptions" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Textarea</label>
+                                        <textarea id="textarea" class="form-control" maxlength="250" rows="3" placeholder="This textarea has a limit of 250 chars."></textarea>
+                                    </div>
+                    
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h4 class="card-title">Bootstrap Touchspin</h4>
+                                    <p class="card-subtitle mb-4">A mobile and touch friendly input spinner component for Bootstrap.</p>
+
+                                    <div class="form-group">
+                                        <label>Using data attributes</label>
+                                        <input data-toggle="touchspin" type="text" value="55">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Example with postfix (large)</label>
+                                        <input data-toggle="touchspin" value="18.20" type="text" data-step="0.1" data-decimals="2" data-bts-postfix="%">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>With prefix</label>
+                                        <input data-toggle="touchspin" type="text" data-bts-prefix="$">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Change button class</label>
+                                        <input data-toggle="touchspin" value="77" type="text" data-bts-button-down-class="btn btn-secondary waves-effect waves-light" data-bts-button-up-class="btn btn-info">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Init with empty value:</label>
+                                        <input data-toggle="touchspin" type="text">
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <label>Max value - (Default value 100)</label>
+                                        <input data-toggle="touchspin" data-bts-max="500" value="100" data-btn-vertical="true" type="text">
+                                    </div>
+
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h4 class="card-title">Date Range Picker</h4>
+                                    <p class="card-subtitle mb-4">A JavaScript component for choosing date ranges, dates and times.</p>
+
+                                    <div class="form-group mb-3">
+                                        <label>Date Range</label>
+                                        <input type="text" class="form-control date" id="singledaterange" data-toggle="daterangepicker" data-cancel-class="btn-warning">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Date Range Picker With Times</label>
+                                        <input type="text" class="form-control date" id="daterangetime" data-toggle="daterangepicker" data-time-picker="true" data-locale="{'format': 'DD/MM hh:mm A'}">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Single Date Picker</label>
+                                        <input type="text" class="form-control date" id="birthdatepicker" data-toggle="daterangepicker" data-single-date-picker="true">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Predefined Date Ranges</label>
+                                        <div id="reportrange" class="form-control" data-toggle="date-picker-range" data-target-display="#selectedValue"  data-cancel-class="btn-light">
+                                            <i class="mdi mdi-calendar"></i>&nbsp;
+                                            <span id="selectedValue"></span> <i class="mdi mdi-menu-down"></i>
+                                        </div>
+                                    </div>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                            
+                        </div> <!-- end col -->
+                    
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="card-body">
+                    
+                                    <h4 class="card-title">Switchery</h4>
+                                    <p class="card-subtitle mb-4">iOS 7 style switches for your checkboxes</p>
+
+                                    <div class="form-group">
+                                        <label>Basic</label>
+                                        <br/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#2e7ce4"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#627898"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#00c2b2"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#df3554"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#f1bf43"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#38b3d6"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#132843"/>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Sizes </label>
+                                        <br/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#df3554" data-size="small"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#00c2b2"/>
+                                        <input type="checkbox" checked data-toggle="switchery" data-color="#627898" data-size="large"/>
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <label>Secondary color</label>
+                                        <br/>
+                                        <input type="checkbox" data-toggle="switchery" data-color="#2e7ce4" data-secondary-color="#df3554" />
+                                        <input type="checkbox" data-toggle="switchery" data-color="#627898"  data-secondary-color="#132843" checked />
+                                        <input type="checkbox" data-toggle="switchery" data-color="#38b3d6" data-secondary-color="#df3554" checked/>
+                                    </div>
+                    
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+
+                            <div class="card">
+                                <div class="card-body">
+                    
+                                    <h4 class="card-title">Select2</h4>
+                                    <p class="card-subtitle mb-4">The jQuery replacement for select boxes</p>
+
+                                    <div class="form-group">
+                                        <label>Single Select</label>
+
+                                        <select class="form-control" data-toggle="select2">
+                                            <option>Select</option>
+                                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                            </optgroup>
+                                            <optgroup label="Pacific Time Zone">
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="WA">Washington</option>
+                                            </optgroup>
+                                            <optgroup label="Mountain Time Zone">
+                                                <option value="AZ">Arizona</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="WY">Wyoming</option>
+                                            </optgroup>
+                                            <optgroup label="Central Time Zone">
+                                                <option value="AL">Alabama</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="WI">Wisconsin</option>
+                                            </optgroup>
+                                            <optgroup label="Eastern Time Zone">
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WV">West Virginia</option>
+                                            </optgroup>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <label>Multiple Select</label>
+
+                                        <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple" data-placeholder="Choose ...">
+                                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                            </optgroup>
+                                            <optgroup label="Pacific Time Zone">
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="WA">Washington</option>
+                                            </optgroup>
+                                            <optgroup label="Mountain Time Zone">
+                                                <option value="AZ">Arizona</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="WY">Wyoming</option>
+                                            </optgroup>
+                                            <optgroup label="Central Time Zone">
+                                                <option value="AL">Alabama</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="WI">Wisconsin</option>
+                                            </optgroup>
+                                            <optgroup label="Eastern Time Zone">
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WV">West Virginia</option>
+                                            </optgroup>
+                                        </select>
+
+                                    </div>
+                                    
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h4 class="card-title">Colorpicker</h4>
+                                    <p class="card-subtitle mb-4">Bootstrap Colorpicker is a modular color picker plugin for Bootstrap 4.</p>
+
+                                    <div class="form-group">
+                                        <label>Default</label>
+                                        <input type="text" id="basic-colorpicker" class="form-control" placeholder="Basic colorpicker">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Hexa Color</label>
+                                        <input type="text" id="hexa-colorpicker" class="form-control" value="#4a81d4">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>As Component</label>
+                                        <div id="component-colorpicker" class="input-group" title="Using format option">
+                                            <input type="text" class="form-control input-lg" value="#305AA2"/>
+                                            <span class="input-group-append">
+                                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <label>Horizontal</label>
+                                        <input type="text" id="horizontal-colorpicker" class="form-control" value="#8fff00">
+                                    </div>
+    
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h4 class="card-title">Bootstrap Datepicker</h4>
+                                    <p class="card-subtitle mb-4">Bootstrap-datepicker provides a flexible datepicker widget in the Bootstrap style.</p>
+
+                                    <div class="form-group">
+                                        <label>Date Picker</label>
+                                        <input type="text" class="form-control" data-provide="datepicker">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Date View</label>
+                                        <input type="text" class="form-control" data-provide="datepicker" data-date-format="d-M-yyyy">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Multi Datepicker</label>
+                                        <input type="text" class="form-control" data-provide="datepicker" data-date-multidate="true">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Autoclose</label>
+                                        <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Month View</label>
+                                        <input type="text" class="form-control" data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1">
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <label>Year View</label>
+                                        <input type="text" class="form-control" data-provide="datepicker" data-date-min-view-mode="2">
+                                    </div>
+    
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row-->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                    
+                                    <h4 class="card-title">Auto Numberic</h4>
+                                    <p class="card-subtitle mb-4">A jQuery Plugin to make masks on form fields and HTML elements.</p>
+                                    
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label>Default</label>
+                                                    <input type="text" placeholder="" class="form-control autonumber" data-a-sep="." data-a-dec=",">
+                                                    <span class="font-13 text-muted">e.g. "1.234.567.890.123"</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Auto Numeric ($)</label>
+                                                    <input type="text" placeholder="" data-a-sign="$ " class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "$ $ 1,234,567,890,123"</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Auto Numeric (€)</label>
+                                                    <input type="text" placeholder="" data-a-sign="€ " class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "€ 1,234,567,890,123"</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Auto Numeric (Rs.)</label>
+                                                    <input type="text" placeholder="" data-a-sign="Rs. " class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "Rs. 1,234,567,890,123"</span>
+                                                </div>
+                                                <div class="form-group m-b-0">
+                                                    <label>4 digit Group (¥)</label>
+                                                    <input type="text" placeholder="" data-d-group="4" data-a-sign="¥ " class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "¥ 1,2345,6789,0123"</span>
+                                                </div>
+
+                                            </form>            
+                                        </div> <!-- end col -->
+
+                                        <div class="col-md-6">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label>Auto Numeric (£)</label>
+                                                    <input type="text" placeholder="" data-a-sign="£ " class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "£ 1,234,567,890,123"</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Auto Numeric (%)</label>
+                                                    <input type="text" placeholder="" data-a-sign="%" data-p-sign="s" class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "11%"</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Maximum Value (0 - 9999)</label>
+                                                    <input type="text" placeholder="" data-v-max="9999" data-v-min="0" class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "9,999"</span>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Range Value (-99.99 - 1000.00)</label>
+                                                    <input type="text" placeholder="" data-v-min="-99.99" data-v-max="1000.00" class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "1000 Or -99.99"</span>
+                                                </div>
+
+                                                <div class="form-group m-b-0">
+                                                    <label>Bracket Value</label>
+                                                    <input type="text" placeholder="" data-a-sep="." data-a-dec="," data-v-min="-9999.99" data-v-max="0.00" data-n-bracket="(,)" class="form-control autonumber">
+                                                    <span class="font-13 text-muted">e.g. "(9,999.00)"</span>
+                                                </div>
+
+                                            </form>        
+                                        </div> <!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row-->
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            2019 © Xacton.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                                Design & Develop by Myra
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Overlay-->
+    <div class="menu-overlay"></div>
+
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/metismenu.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+
+    <!-- Plugins js -->
+    <script src="../plugins/autonumeric/autoNumeric-min.js"></script>
+    <script src="../plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="../plugins/moment/moment.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../plugins/select2/select2.min.js"></script>
+    <script src="../plugins/switchery/switchery.min.js"></script>
+    <script src="../plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="../plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/pages/advanced-plugins-demo.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/theme.js"></script>
+
+</body>
+
+</html>

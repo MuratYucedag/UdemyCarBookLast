@@ -1,0 +1,112 @@
+//
+// datatable.scss
+//
+
+.dataTables_wrapper.container-fluid {
+    padding: 0;
+}
+
+table.dataTable {
+    border-collapse: collapse !important;
+    margin-bottom: 15px !important;
+
+    tbody {
+        // Multi select table
+
+        > tr.selected, >tr>.selected {
+            background-color: $primary;
+            
+            td {
+                border-color: $primary;
+            }
+        }
+        td {
+            &:focus {
+                outline: none !important;
+            }
+        }
+        // Key Tables
+        th.focus,td.focus{
+            outline: 2px solid $primary !important;
+            outline-offset: -1px;
+            color: $primary;
+            background-color: rgba($primary, 0.15);
+        }
+    }
+}
+
+.dataTables_info {
+    font-weight: $font-weight-medium;
+}
+
+// Responsive data table
+table.dataTable.dtr-inline.collapsed {
+    > tbody {
+        >tr[role=row] {
+            > td, > th {
+                &:first-child{
+                    &:before{
+                        box-shadow: $box-shadow-lg;
+                        background-color: $success;
+                        top: $table-cell-padding;
+                    }
+                }
+            }
+        }
+        >tr.parent {
+            > td, > th {
+                &:first-child{
+                    &:before{
+                        background-color: $danger;
+                        top: $table-cell-padding;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Data Table copy button
+div.dt-button-info {
+    background-color: $primary;
+    border: none;
+    color: $white;
+    box-shadow: none;
+    border-radius: 3px;
+    text-align: center;
+    z-index: 21;
+
+    h2 {
+        border-bottom: none;
+        background-color: rgba($white, 0.2);
+        color: $white;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    li.paginate_button.previous,li.paginate_button.next {
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+ 
+    li.paginate_button {
+        display: none;
+    }
+    .dataTables_paginate {
+        ul {
+            text-align: center;
+            display: block;
+            margin: $spacer 0 0 !important;
+        }
+    }
+    div.dt-buttons {
+        display: inline-table;
+        margin-bottom: $spacer;
+    }
+}
+
+.activate-select {
+    .sorting_1 {
+        background-color: $gray-100;
+    }
+}

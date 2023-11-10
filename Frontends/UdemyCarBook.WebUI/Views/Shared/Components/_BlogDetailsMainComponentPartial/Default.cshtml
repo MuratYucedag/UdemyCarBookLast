@@ -1,0 +1,19 @@
+﻿@model GetBlogById
+<div class="col-md-8 ftco-animate">
+
+    <h2 class="mb-3">@Model.Title</h2>
+    <p>@Model.Description</p>
+
+    @await Component.InvokeAsync("_BlogDetailCloudTagByBlogComponentPartial",new {id=ViewBag.blogid})
+
+    @await Component.InvokeAsync("_BlogDetailsAuthorAboutComponentPartial",new {id=ViewBag.blogid})
+
+    <div class="pt-5 mt-5">
+        <h3 class="mb-5">6 Yorum</h3>
+
+        @await Component.InvokeAsync("_CommentListByBlogComponentPartial")
+
+        @await Component.InvokeAsync("_AddCommentComponentPartial")
+
+    </div>
+</div>

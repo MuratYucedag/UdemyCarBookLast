@@ -1,0 +1,19 @@
+// 
+// _footer.scss
+// 
+
+.footer {
+  border-top: 1px solid $gray-300;
+  bottom: 0;
+  padding: 19px 12px 20px;
+  position: absolute;
+  right: 0;
+  color: $gray-600;
+  left: $sidebar-width;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    left: 0;
+  }
+}

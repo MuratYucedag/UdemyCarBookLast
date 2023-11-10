@@ -1,0 +1,123 @@
+// 
+// _header.scss
+// 
+
+#page-topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.navbar-header {
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: $header-height;
+  background-color: $header-bg;
+  padding: 0 20px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.05), 0 1px 0 rgba(0,0,0,0.05);
+  margin-left: $sidebar-width;
+
+  .dropdown.show {
+    .header-item {
+      background-color: rgba($dark,0.04);
+    }
+  }
+}
+
+.navbar-brand-box {
+  text-align: center;
+}
+
+.logo {
+  line-height: 70px;
+  color: $white !important;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  span {
+    vertical-align: middle;
+  }
+
+  i {
+    font-size: 22px;
+  }
+}
+
+.page-title-box {
+  padding-bottom: $grid-gutter-width;
+  
+  .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-brand-box {
+    padding-left: 0;
+  }
+  
+  .navbar-header {
+    margin-left: 0;
+  }
+  .logo {
+    padding-right: 15px;
+
+    span {
+      display: none;
+    }
+  
+    i {
+      display: inline-block;
+    }
+  }
+}
+
+.page-content {
+  padding: calc(#{$header-height} + #{$grid-gutter-width}) calc(#{$grid-gutter-width} / 2) $footer-height calc(#{$grid-gutter-width} / 2);
+}
+
+.header-item {
+  height: $header-height;
+  box-shadow: none !important;
+  color: $header-item-color;
+  border: 0;
+
+  &:hover {
+    color: $header-item-color;
+  }
+}
+
+.header-profile-user {
+  height: 36px;
+  width: 36px;
+  background-color: rgba($white, 0.5);
+  padding: 3px;
+}
+
+.noti-icon {
+  i {
+    font-size: 24px;
+    color: $header-item-color;
+  }
+
+  .badge {
+    position: absolute;
+    top: 12px;
+  }
+}
+
+.notification-item {
+  .media {
+    padding: 0.75rem 1rem;
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+}

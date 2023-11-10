@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "BlogDetail";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+
+            @await Component.InvokeAsync("_BlogDetailsMainComponentPartial",new {id=ViewBag.blogid})
+
+            <div class="col-md-4 sidebar ftco-animate">
+
+                @await Component.InvokeAsync("_BlogDetailSideBarSearchBoxComponentPartial")
+
+                @await Component.InvokeAsync("_BlogDetailsCategoryComponentPartial")
+
+                @await Component.InvokeAsync("_BlogDetailsRecentBlogsComponentPartial")
+
+              @*   @await Component.InvokeAsync("_BlogDetailsTagCloudComponentPartial",new {id=ViewBag.blogid}) *@
+
+                @await Component.InvokeAsync("_BlogDetailsParagraphComponentPartial")
+
+            </div>
+        </div>
+    </div>
+</section>
