@@ -19,7 +19,7 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
         }
         public async Task Handle(UpdateCarCommand command)
         {
-            var values = await _repository.GetByIdAsync(command.BrandID);
+            var values = await _repository.GetByIdAsync(command.CarID);
             values.Fuel = command.Fuel;
             values.Transmission = command.Transmission;
             values.BigImageUrl = command.BigImageUrl;
