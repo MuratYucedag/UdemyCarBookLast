@@ -30,4 +30,9 @@
     <ProjectReference Include="..\UdemyCarBook.Dto\UdemyCarBook.Dto.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,51 @@
+﻿@model List<ResultCategoryDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog Kategorileri Listesi</h4>
+                        <p class="card-subtitle mb-4">
+                           Bloglara ait kategorilerle ilgili işlemlerin gerçekleştirileceği sayfadır. Kategori girişi yaparken bilgileri eksiksiz girmeye özen gösterelim.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Kategori Adı</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                        <th>Kategoriye Ait Bloglar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>@item.Name</td>
+                                            <td><a href="/Admin/AdminCategory/RemoveCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><a href="/Admin/AdminCategory/#/@item.CategoryId" class="btn btn-outline-dark">Kategoriye Ait Bloglar</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Admin/AdminCategory/CreateCategory" class="btn btn-outline-primary">Yeni Kategori Girişi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

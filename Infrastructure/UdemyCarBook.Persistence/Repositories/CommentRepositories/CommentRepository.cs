@@ -18,19 +18,18 @@ namespace UdemyCarBook.Persistence.Repositories.CommentRepositories
         }
         public void Create(Comment entity)
         {
-
             _context.Comments.Add(entity);
             _context.SaveChanges();
         }
 
         public List<Comment> GetAll()
         {
-            return _context.Comments.Select(x=> new Comment
+            return _context.Comments.Select(x => new Comment
             {
                 CommentID = x.CommentID,
                 BlogID = x.BlogID,
                 CreatedDate = x.CreatedDate,
-                Description= x.Description,
+                Description = x.Description,
                 Name = x.Name
             }).ToList();
         }
@@ -38,6 +37,11 @@ namespace UdemyCarBook.Persistence.Repositories.CommentRepositories
         public Comment GetById(int id)
         {
             return _context.Comments.Find(id);
+        }
+
+        public List<Comment> GetCommentsByBlogId(int id)
+        {
+            return _context.Set<Comment>().Where(x => x.BlogID == id).ToList();
         }
 
         public void Remove(Comment entity)

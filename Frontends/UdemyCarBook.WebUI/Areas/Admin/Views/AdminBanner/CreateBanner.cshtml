@@ -1,0 +1,41 @@
+﻿@model CreateBannerDto
+
+@{
+    ViewData["Title"] = "CreateBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yeni Banner Bilgisi Girişi</h4>
+                        <p class="card-subtitle mb-4">Banner alanına veri girişini aşağıdaki panelden yapabilirsiniz. Tasarımda bozulma olmaması adına yeni bir banner girişi yaptıktan sonra önceki banner alanını silin, sadece 1 tane banner verisi kalmalıdır.</p>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputTitle">Başlık</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="Başlığı Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Açıklamayı Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputVideoDescription">Video Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputVideoDescription" asp-for="VideoDescription" placeholder="Video Açıklama Bilgisini Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputVideoUrl">Video Url</label>
+                                <input type="text" class="form-control" id="exampleInputVideoUrl" asp-for="VideoUrl" placeholder="Video'nun Youtube Embed Linkini Giriniz">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Banner Bilgisini Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

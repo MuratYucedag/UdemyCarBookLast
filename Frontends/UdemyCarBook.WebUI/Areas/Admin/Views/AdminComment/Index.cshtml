@@ -1,0 +1,44 @@
+﻿@model List<ResultCommentDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yorum Listesi - BlogID: @ViewBag.v</h4>
+                        <p class="card-subtitle mb-4">
+                            Bloglarla ilgili o bloga yapılmış olan yorum listesini bu sayfadan görebilirsiniz. İlgili yorumları kaldırabilir ya da tekrar aktif hale getirebilirsiniz. Bunun için yorumların altında yer alan butonları kullanabilirsiniz.
+                        </p>
+                        @foreach(var item in Model)
+                        {
+                            count++;
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <h5 class="card-header">Yorum - @count</h5>
+                                    <div class="card-body">
+                                        <h4 class="card-title">@item.Name</h4>
+                                        <p class="card-text">
+                                           @item.Description.
+                                        </p>
+                                        <a href="#" class="btn btn-primary waves-effect waves-light">Yorumu Kaldır</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
