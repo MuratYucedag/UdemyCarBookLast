@@ -1,0 +1,51 @@
+﻿@model List<ResultLocationDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Lokasyon Bilgileri Alanı</h4>
+                        <p class="card-subtitle mb-4">
+                            Ana sayfa ve araç kiralama sayfasında yer alan araçların alınış ve bırakılış noktalarını temsil eden yer lokasyon kısmıdır. Aşağıda araç kiralama noktalarına ait lokasyon bilgilerinin isimleri yer almaktadır. Sağ tarafta yer alan buton üzerinden bu lokasyonun harita bilgisine erişim sağlayabilirsiniz.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Lokasyon</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                        <th>Konumu Aç</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>@item.Name</td>
+                                            <td><a href="/Admin/AdminLocation/RemoveLocation/@item.LocationID" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminLocation/UpdateLocation/@item.LocationID" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><a href="/Admin/AdminLocation/LocationDEtail/@item.LocationID" class="btn btn-outline-dark">Konumu Aç</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Admin/AdminLocation/CreateLocation" class="btn btn-outline-primary">Yeni Lokasyon Girişi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
