@@ -10,9 +10,7 @@
     <form class="bg-light p-5 contact-form" method="post">
         <h3 class="alert alert-success">Araç Rezervasyon Formu</h3>
         <br />
-        <div class="form-group">
-            <input type="text" asp-for="CarID" class="form-control" placeholder="Almak İstediğiniz Araba">
-        </div>
+            <input type="hidden" asp-for="CarID" value="@ViewBag.v3" class="form-control" placeholder="Almak İstediğiniz Araba">
         <div class="form-group">
             <input type="text" asp-for="Name" class="form-control" placeholder="Adınız">
         </div>

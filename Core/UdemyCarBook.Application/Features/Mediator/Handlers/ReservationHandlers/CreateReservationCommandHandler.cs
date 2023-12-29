@@ -21,16 +21,17 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.ReservationHandler
         {
             await _repository.CreateAsync(new Reservation
             {
-                Age=request.Age,
-                CarID=request.CarID,
-                Description=request.Description,
-                DriverLicenseYear=request.DriverLicenseYear,
+                Age = request.Age,
+                CarID = request.CarID,
+                Description = request.Description,
+                DriverLicenseYear = request.DriverLicenseYear,
                 DropOffLocationID = request.DropOffLocationID,
                 Email = request.Email,
                 Name = request.Name,
                 Phone = request.Phone,
                 PickUpLocationID = request.PickUpLocationID,
-                Surname = request.Surname
+                Surname = request.Surname,
+                Status = "Rezervasyon Alındı"
             });
         }
     }
