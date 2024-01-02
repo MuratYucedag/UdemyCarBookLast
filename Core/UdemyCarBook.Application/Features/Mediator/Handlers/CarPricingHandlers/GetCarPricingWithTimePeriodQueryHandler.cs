@@ -26,6 +26,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
 			return values.Select(x => new GetCarPricingWithTimePeriodQueryResult
 			{
 				Model=x.Model,
+				CoverImageUrl=x.CoverImageUrl,
 				DailyAmount = x.Amounts[0],
 				WeeklyAmount= x.Amounts[1],
 				MonthlyAmount= x.Amounts[2]
