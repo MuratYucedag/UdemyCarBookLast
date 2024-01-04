@@ -10,7 +10,7 @@
             </div>
             <div class="comment-body">
                 <h3>@item.Name</h3>
-                <div class="meta">@item.CreatedDate</div>
+                <div class="meta">@(((DateTime)item.CreatedDate).ToString("dd-MMM-yyyy"))</div>
                 <p>@item.Description</p>
             </div>
         </li>
