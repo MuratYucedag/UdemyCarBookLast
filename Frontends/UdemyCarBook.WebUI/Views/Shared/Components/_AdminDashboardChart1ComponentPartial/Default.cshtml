@@ -1,0 +1,51 @@
+﻿<script src="~/chart.js"></script>
+
+   
+
+<div class="col-lg-4">
+    <div class="card">
+        <div class="card-body">
+            
+            <h4 class="card-title d-inline-block">Yıllık Kiralama Sayıları</h4>
+
+            <div style="height:260px;">
+                <canvas id="my1Chart" height="220px"></canvas>
+                <script>
+                    var values = document.getElementById('my1Chart').getContext('2d');
+                    var myChart = new Chart(values, {
+                        type: 'line',
+                        data: {
+                            labels: ['2019', '2020', '2021', '2022', '2023'],
+                            datasets: [{
+                                label: 'Yıllık Kiralama Grafiği',
+                                data: [285, 245, 185, 366, 458],
+                                borderColor: 'rgba(75,192,192,1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+                
+
+            </div>
+
+            <div class="row text-center mt-4">
+                <div class="col-6">
+                    <h4>₺ 367.850</h4>
+                    <p class="text-muted mb-0">Son 1 Aylık  Ciro</p>
+                </div>
+                <div class="col-6">
+                    <h4>₺ 7850</h4>
+                    <p class="text-muted mb-0">Bugünkü Kazanç</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

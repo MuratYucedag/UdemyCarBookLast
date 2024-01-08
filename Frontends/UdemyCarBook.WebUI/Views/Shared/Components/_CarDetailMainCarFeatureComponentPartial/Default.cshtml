@@ -1,0 +1,93 @@
+﻿@model UdemyCarBook.Dto.CarDtos.ResultCarWithBrandsDtos
+
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="car-details">
+                <div class="img rounded" style="background-image: url(@Model.CoverImageUrl);"></div>
+                <div class="text text-center">
+                    <span class="subheading">@Model.BrandName</span>
+                    <h2>@Model.Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+                <div class="media-body py-md-4">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+                        <div class="text">
+                            <h3 class="heading mb-0 pl-3">
+                                Km
+                            <span>@Model.Km</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+                <div class="media-body py-md-4">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+                        <div class="text">
+                            <h3 class="heading mb-0 pl-3">
+                                Vites Türü
+                            <span>@Model.Transmission</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+                <div class="media-body py-md-4">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+                        <div class="text">
+                            <h3 class="heading mb-0 pl-3">
+                                Koltuk Sayısı
+                            <span>@Model.Seat</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+                <div class="media-body py-md-4">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-backpack"></span></div>
+                        <div class="text">
+                            <h3 class="heading mb-0 pl-3">
+                                Bagaj Sayısı
+                            <span>@Model.Luggage</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+                <div class="media-body py-md-4">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+                        <div class="text">
+                            <h3 class="heading mb-0 pl-3">
+                                Yakıt Türü
+                            <span>@Model.Fuel</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

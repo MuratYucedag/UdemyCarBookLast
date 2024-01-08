@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<script src="~/chart.js"></script>
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araba Listesi</h4>
+                        <p class="card-subtitle mb-4">
+                            Arabalarla ilgili ekleme, silme, güncelleme, arama ve listeleme gibi işlemleri bu sayfa üzerinden gerçekleştirebilirsiniz.
+                        </p>
+                        
+                        <h2>@ViewData["Title"]</h2>
+
+                       
+
+                        <br /><br />
+
+                        <canvas id="myChart" width="400" height="200"></canvas>
+
+                        <script>
+                            var ctx = document.getElementById('myChart').getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'pie',
+                                data: {
+                                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                    datasets: [{
+                                        label: 'Example Chart',
+                                        data: [12, 19, 3, 5, 2, 3],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.7)',
+                                            'rgba(54, 162, 235, 0.7)',
+                                            'rgba(255, 206, 86, 0.7)',
+                                            'rgba(75, 192, 192, 0.7)',
+                                            'rgba(153, 102, 255, 0.7)',
+                                            'rgba(255, 159, 64, 0.7)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                }
+                            });
+                        </script>
+
+                    </div>
+                    <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+            <!-- end col -->
+
+        </div>
+        <!-- end page title -->
+
+    </div> <!-- container-fluid -->
+</div>

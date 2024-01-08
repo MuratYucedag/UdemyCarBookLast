@@ -1,0 +1,37 @@
+﻿@model List<ResultAllBlogsWithAuthorDto>
+@{
+    int count = 0;
+}
+
+<div class="col-xl-6">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Son Bloglar</h4>
+            <p class="card-subtitle mb-4 font-size-13">
+                Yazarlarımızın Son 5 Blog Listesi
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-borderless table-hover table-centered table-nowrap mb-0">
+                    <tr>
+                        <th>Blog Başlığı</th>
+                        <th>Yazar</th>
+                        <th>Blogu Aç</th>
+                    </tr>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                            <td><h5 class="font-size-15 mb-1 font-weight-normal">@item.title</h5></td>
+                            <td><h5 class="font-size-17 mb-1 font-weight-normal">@item.authorName</h5></td>
+                            <td><h5 class="font-size-15 mb-1 font-weight-normal"><a href="/Blog/BlogDetail/@item.blogID" class="btn btn-primary">Blogu Aç</a></h5>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- end card-body-->
+    </div> <!-- end card-->
+</div>
