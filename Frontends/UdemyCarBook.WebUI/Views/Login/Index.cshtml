@@ -1,0 +1,107 @@
+﻿@model UdemyCarBook.Dto.LoginDtos.CreateLoginDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Xacton - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="MyraStudio" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/Admin/vertical/assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="~/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center min-vh-100">
+                        <div class="w-100 d-block bg-white shadow-lg rounded my-5">
+                            <div class="row">
+                                <div class="col-lg-5 d-none d-lg-block bg-login rounded-left"></div>
+                                <div class="col-lg-7">
+                                    <div class="p-5">
+                                        <div class="text-center mb-5">
+                                            <a href="/Default/Index/" class="text-dark font-size-22 font-family-secondary">
+                                                <i class="mdi mdi-alpha-x-circle"></i> <b>CarBook</b>
+                                            </a>
+                                        </div>
+                                        <h1 class="h5 mb-1">Tekrar Hoş Geldin!</h1>
+                                        <p class="text-muted mb-4">Admin sayfasına erişim için bilgilerinizi giriniz.</p>
+                                        <form class="user" method="post">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Kullanıcı Adınız" asp-for="Username">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Şifreniz" asp-for="Password">
+                                            </div>
+                                            <button class="btn btn-success btn-block waves-effect waves-light"> Giriş Yap </button>
+                                        </form>
+                                            <div class="text-center mt-4">
+                                                <h5 class="text-muted font-size-16">Sosyal Medya Hesaplarımız</h5>
+
+                                                <ul class="list-inline mt-3 mb-0">
+                                                    <li class="list-inline-item">
+                                                        <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github-circle"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                       
+
+                                        <div class="row mt-4">
+                                            <div class="col-12 text-center">
+                                                <p class="text-muted mb-2"><a href="pages-recoverpw.html" class="text-muted font-weight-medium ml-1">Şifrenizi mi Unuttunuz?</a></p>
+                                                <p class="text-muted mb-0">Bir hesabınız yok mu? <a href="/Register/CreateAppUser/" class="text-muted font-weight-medium ml-1"><b>Bir Hesap Oluştur</b></a></p>
+                                            </div> <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+                                    </div> <!-- end .padding-5 -->
+                                </div> <!-- end col -->
+                            </div> <!-- end row -->
+                        </div> <!-- end .w-100 -->
+                    </div> <!-- end .d-flex -->
+                </div> <!-- end col-->
+            </div> <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end page -->
+    <!-- jQuery  -->
+    <script src="~/Admin/vertical/assets/js/jquery.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/metismenu.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/waves.js"></script>
+    <script src="~/Admin/vertical/assets/js/simplebar.min.js"></script>
+
+    <!-- App js -->
+    <script src="~/Admin/vertical/assets/js/theme.js"></script>
+
+</body>
+
+</html>

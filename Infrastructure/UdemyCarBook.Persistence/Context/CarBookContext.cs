@@ -14,6 +14,8 @@ namespace UdemyCarBook.Persistence.Context
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-R7AR1ND;initial Catalog=UdemyCarBookDb;integrated Security=true;TrustServerCertificate=true;");
         }
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<AppRole> AppRoles { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Brand> Brands { get; set; }
@@ -36,6 +38,7 @@ namespace UdemyCarBook.Persistence.Context
         public DbSet<Comment> Comments { get; set; }
         public DbSet<RentACar> RentACars { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

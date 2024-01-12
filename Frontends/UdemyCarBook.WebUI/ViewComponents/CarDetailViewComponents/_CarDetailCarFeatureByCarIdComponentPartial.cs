@@ -11,9 +11,6 @@ namespace UdemyCarBook.WebUI.ViewComponents.CarDetailViewComponents
 		{
 			_httpClientFactory = httpClientFactory;
 		}
-
-		[Route("Index/{id}")]
-		[HttpGet]
 		public async Task<IViewComponentResult> InvokeAsync(int id)
 		{
 			ViewBag.carid = id;
