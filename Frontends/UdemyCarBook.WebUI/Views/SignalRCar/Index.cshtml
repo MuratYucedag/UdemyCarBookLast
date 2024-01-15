@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+@section Scripts
+{
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <script type="text/javascript">
+                            $(document).ready(() => {
+                                var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7060/CarHub").build();
+                                $("#constatus").text(connection.state);
+                                connection.start().then(() => {
+                                    $("#constatus").text(connection.state);
+                                    setInterval(() => {
+                                        connection.invoke("SendCarCount");
+                                    }, 1000);
+                                }).catch((err) => { console.log(err) });
+
+                                connection.on("ReceiveCarCount", (value) => {
+                                    $("#carcount").text(value);
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-info">Bağlantının Durumu: <strong id="constatus"></strong></div>
+    </div>
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-danger">Araba Sayısı: <strong id="carcount"></strong></div>
+    </div>
+</div>
